@@ -9,7 +9,8 @@ import {
   RiPieChartLine,
   RiSettings2Line,
   RiCloseLine,
-  RiSearch2Line
+  RiSearch2Line,
+  RiArrowDownSLine
 } from "react-icons/ri";
 //import SidebarMov from "./components/shared/SidebarMov";
 
@@ -66,12 +67,19 @@ function App() {
               </form>
               </div>
               {/* Tabs */}
-              <nav className="text-gray-300 flex items-center gap-4">
-                <a href="#" className="border-b py-2">Hot Dishes</a>
-                <a href="#" className="border-b py-2">Cold Dishes</a>
-                <a href="#" className="border-b py-2">Soup</a>
-                <a href="#" className="border-b py-2">Grill</a>
+              <nav className="text-gray-300 flex items-center justify-between border-b mb-6">
+                <a href="#" className="relative py-2 pr-4 before:w-1/2 before:h-1 before:absolute before:bg-[#ec7c6a] before:left-0 before:rounded-full before:-bottom-[2px] text-[#ec7c6a]">Hot Dishes</a>
+                <a href="#" className="relative py-2 pr-4">Cold Dishes</a>
+                <a href="#" className=" py-2 pr-4">Soup</a>
+                <a href="#" className=" py-2 pr-4">Grill</a>
               </nav>
+              {/* Title Content */}
+              <div className="flex items-center justify-between">
+                <h2 className="text-xl text-gray-300">
+                  Choose Dishes
+                </h2>
+                <button className="flex items-center gap-4 text-gray-300 bg-[#1F1D2B] py-2 px-4 rounded-lg" ><RiArrowDownSLine/> Dine in </button>
+              </div>
             </header>
           </div>
           <div className="lg:col-span-2  fixed lg:static right-0">Carrito</div>
